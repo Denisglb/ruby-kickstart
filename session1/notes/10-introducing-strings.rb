@@ -9,3 +9,4 @@
 "abc" # => "abc"
 'abc' # => "abc"
 
+puts 10.to_s
