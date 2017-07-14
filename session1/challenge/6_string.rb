@@ -8,4 +8,14 @@
 # odds_and_evens("abcdefg",false)   # => "aceg"
 
 def odds_and_evens(string, return_odds)
+	to_return = ""
+	string.size.times do |i|
+		next if return_odds && i.even?
+		next if !return_odds && i.odd?
+		to_return << string[i]
+	end
+	to_return
 end
+
+puts odds_and_evens("abcdefg",true)    # => "bdf"
+puts odds_and_evens("abcdefg",false)   # => "aceg"
