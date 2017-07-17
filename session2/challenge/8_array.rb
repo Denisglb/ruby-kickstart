@@ -5,3 +5,14 @@
 # got_three? ['a', 'a', 'b']  # => false
 # got_three? ['a', 'a', 'a']  # => true
 # got_three? [1, 2, 1, 1]     # => false
+
+def got_three?(figure)
+	figure.each_cons 3 do |a,b,c|
+	return true if a==b && b==c
+end
+false
+end
+
+print got_three? [1, 2, 1, 1]
+
+#soltuion used

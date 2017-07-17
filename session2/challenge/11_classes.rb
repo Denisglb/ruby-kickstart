@@ -18,3 +18,15 @@
 # if the parameter is greater than 99, set the number of beer bottles to 99
 # Then make a public method called print_song that outputs all stanzas from the number of bottles of beer down to zero.
 # Add any additional methods you find helpful.
+
+num_start = 99
+num_now = num_start
+
+while num_now >0 
+	puts num_now.to_s + "bottles of beer on the wall" + num_now.to_s + "bottles of beer!"
+	num_now = num_now -1 
+	puts "take one down, pass it around" + num_now.to_s + "bottles of beer on the wall"
+end
+
+puts "no more bottles of beer on the wall!"
+

@@ -14,3 +14,12 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+def prime_chars?(strings)
+	string_length = strings.join.split('').length
+	if string_length % 1 == 0 || string_length % string_length == 1
+		return true
+	else
+	 false
+	end
+end
+print prime_chars? ['ab', 'cd']

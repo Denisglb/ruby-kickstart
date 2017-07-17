@@ -8,3 +8,13 @@
 # alternate_words("Lorem ipsum dolor sit amet.")  # => ["Lorem", "dolor", "amet"]
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
+
+def alternate_words (sentence)
+	to_return = []
+	
+	sentence.split.each_slice(2).map { |a, b| to_return << a }
+end
+
+print alternate_words("Lorem ipsum dolor sit amet.")
+
+#sort of works... Nearly, there. I'll get back to this

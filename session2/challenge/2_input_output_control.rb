@@ -19,7 +19,13 @@
 # and when you think it is correct, you can test it with  $ rake 2:2
 
 def hi_hi_goodbye
-  # your code here
+  puts "print a number"
+  	number = gets.chomp
+  	if number != "bye"
+  		print "hi "*number.chomp.to_i
+  	else
+  		print "goodbye"
+  	end
 end
 
 

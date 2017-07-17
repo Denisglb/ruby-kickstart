@@ -24,7 +24,17 @@
 # USER:     BYE
 
 def deaf_grandma
-
+	while true
+	answer =gets.chomp
+	if answer == "BYE"
+		break
+	elsif answer != answer.upcase
+	puts "HUH?! SPEAK UP, SONNY!"	
+	else
+	rand_year =1930 + rand(21)
+	puts "NO, NOT SINCE " + rand_year.to_s
+	end				
+end
 end
 
 
