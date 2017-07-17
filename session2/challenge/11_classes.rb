@@ -49,7 +49,8 @@ class BeerSong
 	end
 
 
-	def number_to_words(number)
+	def numbe
+		r_to_words(number)
 		numbers = {
 		90 => "Ninety",
 		80 => "Eighty",
