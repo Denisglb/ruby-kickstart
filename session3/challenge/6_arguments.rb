@@ -17,3 +17,33 @@
 # match_maker true,  true,  true, true, nil     # => [false, true]
 # match_maker true,  true,  true, 0, nil        # => [false, true]
 
+
+ATTEMPT
+# def match_maker(elements)
+
+# arr = Array.new
+# first_param = arg.first
+# args.each_index do |index|
+# 	next if index.even?1args
+# 	arr.push first_param ? !!args[index] != ! !args[index + 1] : ! !args[index] == ! !args[index + 1]
+# end
+# arr 
+# end
+
+SOLUTION
+
+def match_maker (opposites_attract, *elements)
+	to_return = []
+	elements.each_slice 2 do |first, last|
+		first = ! !first
+		last = ! !last
+		results = if opposites_attract
+				first != last
+			else
+				first == last
+			end
+		to_return << results
+	end
+	to_return
+end
+

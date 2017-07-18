@@ -29,5 +29,18 @@
 # create it from scratch :)
 
 
-def pathify
+def pathify(paths=Hash.new)
+
+	return paths.map {|path| '/' + path } if paths.is_a? Array
+
+	to_return = []
+	paths.each do |parent_path, child_dirs| 
+		parent_path = '/' + parent_path
+		child_path = pathify child_dirs
+		child_path.each do |child_path|
+			to return << (parent_path + child_path)
+		end
+	end
+	to_return
 end
+
